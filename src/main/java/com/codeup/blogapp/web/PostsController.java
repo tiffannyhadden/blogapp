@@ -1,7 +1,7 @@
-package web;
-//supposed to be com.codeup.blogapp.web;
+package com.codeup.blogapp.web;
 
-import data.Post;
+
+import com.codeup.blogapp.data.Post;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;

@@ -4,7 +4,7 @@ import fetchData from "./fetchData.js";
 import {getAuthBearerTokenHeader} from "./auth.js";
 
 /**
- * Finds the correct route for a given view, builds a loading view, fetches data and builds the final rendered view.
+ * Finds the correct route for a given view, builds a loading view, fetches com.codeup.blogapp.data and builds the final rendered view.
  * @param URI
  */
 export default function createView(URI) {
