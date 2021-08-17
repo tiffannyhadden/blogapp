@@ -4,11 +4,13 @@ public class Post {
     private Long id;
     private String title;
     private String content;
+    private String User user;
 
     public Post(Long id, String title, String content) {
         this.id = id;
         this.title = title;
         this.content = content;
+        this.user = user;
     }
 
     public Long getId() {
