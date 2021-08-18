@@ -27,7 +27,7 @@ public class UsersController {
     private User getUserById(@PathVariable Long id){
         // /api/posts/1
         if(id == 1) {
-            return new User()
+            return new User();
         }else{
             return null;
         }
@@ -39,7 +39,7 @@ public class UsersController {
     }
 
     @PutMapping("{id}")
-    private void updateUser(PathVariable Long id, @RequestBody User user){
+    private void updateUser(PathVariable id, @RequestBody User user){
         System.out.println(id);
     }
 

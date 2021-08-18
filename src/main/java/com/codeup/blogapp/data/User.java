@@ -10,6 +10,10 @@ public class User {
     private String password;
     private Role role = Role.USER;
 
+    public User(String username) {
+        this.username = username;
+    }
+
     public enum Role {USER, ADMIN};
 
     public User(long id, String username, String email, String password) {
