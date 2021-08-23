@@ -1,10 +1,14 @@
-package com.codeup.blogapp.data;
+package com.codeup.blogapp;
+
+import com.codeup.blogapp.Post;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
 import java.util.Collection;
-import java.util.Date;
+
 //Create the fields
 @Entity
+@Table(name = "users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,7 +24,11 @@ public class User {
     private String password;
 
     //    private Date createdAt;
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
     private Role role = Role.USER;
+    @OneToMany(mappedBy = "id")
+    @JsonBackReference
     private Collection<Post> posts;
 
     public User(long id, String username, String email, String password) {

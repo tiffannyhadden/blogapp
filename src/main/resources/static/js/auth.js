@@ -2,7 +2,7 @@ import fetchData from "./fetchData.js";
 import createView from "./createView.js";
 
 /**
- * Adds a login event to allow the user to initially obtain a new OAuth2.0 token
+ * Adds a login event to allow the data.user to initially obtain a new OAuth2.0 token
  * On a successful response, sets the tokens into storage and redirects to the root
  */
 export default function addLoginEvent() {
@@ -35,7 +35,7 @@ export default function addLoginEvent() {
 
 /**
  * Gets the Authorization header needed for making requests to protected endpoints
- * This function should be used only after the user is logged in
+ * This function should be used only after the data.user is logged in
  * @returns {boolean|{headers: {Authorization: string}}}
  */
 export function getAuthBearerTokenHeader() {
@@ -48,7 +48,7 @@ export function getAuthBearerTokenHeader() {
 }
 
 /**
- * Attempts to set the access and refresh tokens needs to authenticate and authorize the client and user
+ * Attempts to set the access and refresh tokens needs to authenticate and authorize the client and data.user
  * @param responseData
  */
 function setTokens(responseData) {

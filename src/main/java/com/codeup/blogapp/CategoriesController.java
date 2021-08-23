@@ -1,4 +1,4 @@
-package com.codeup.blogapp.web;
+package com.codeup.blogapp;
 
 
 import org.springframework.web.bind.annotation.RequestParam;
