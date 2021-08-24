@@ -2,6 +2,7 @@ package com.codeup.blogapp;
 
 import com.codeup.blogapp.Post;
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import java.util.Collection;
@@ -27,8 +28,8 @@ public class User {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private Role role = Role.USER;
-    @OneToMany(mappedBy = "id")
-    @JsonBackReference
+    @OneToMany(mappedBy = "user")
+    @JsonIgnoreProperties("user")
     private Collection<Post> posts;
 
     public User(long id, String username, String email, String password) {
